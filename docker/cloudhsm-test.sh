@@ -1,9 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-
 docker run --rm --name ethsigner \
-  -e HSM_IP="10.1.0.171" \
   -v $PWD/ecd7b37cb0d7220eee1c970669b16b635de60196.toml:/etc/ethsigner/keyfiles/ecd7b37cb0d7220eee1c970669b16b635de60196.toml \
   -v $PWD/customerCA.crt:/opt/cloudhsm/etc/customerCA.crt \
   -p 6545:6545 \
